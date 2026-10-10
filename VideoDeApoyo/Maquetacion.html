@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: aqua;
+            padding: 100px;
+            grid-area: uno;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        a{
+            background-color: blueviolet;
+            padding: 70px;
+            box-shadow: 5px 5px 5px black;
+            transition: all 1s;
+            animation: colores 5s infinite;
+        }
+        @keyframes colores{
+            from{
+                color: red;
+            }
+            to{
+                color: yellow;
+            }
+        }
+        a:hover{
+            background-color: yellowgreen;
+            transform: skew(20deg, 20deg);
+        }
+        #uno{
+            background: linear-gradient(red, yellow, green);
+        }
+        #dos{
+            background-color: red;
+            grid-area: dos;
+        }
+        #tres{
+            background-color: yellow;
+            grid-area: tres;
+        }
+        #cuatro{
+            background-color: green;
+            grid-area: cua;
+        }
+        footer{
+            background-color: blue;
+        }
+        body{
+            display: grid;
+            grid-template-rows: 300px 600px 200px;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: 
+            "uno uno"
+            "dos tres"
+            "cua cua";
+            gap: 5px;
+        }
+        @media(max-width:800px){
+            #dos{
+                background-color: green;
+            }
+            a{
+                text-shadow: 4px 6px 4px red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="">inicio</a>
+        <a href="">horarios</a>
+        <a href="">historia</a>
+        <a href="" id="uno">productos</a>
+    </nav>
+    <section id="dos">2</section>
+    <section id="tres">3</section>
+    <footer>4</footer>
+</body>
+</html>
